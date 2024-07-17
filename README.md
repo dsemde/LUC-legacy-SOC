@@ -17,13 +17,13 @@ The Profile Viewer accessed via the Bodenzustandserhebung Landwirtschaft (BZE-LW
 File names refer to the figures in the manuscript. Code for the associated statistics for each figure is generally included within the figure script.
 
 **Dataset compilation**<br>
-G_to_A_data_3_depths.R<br>
-A_to_G_data_3_depths.R
+*c_to_g_data_compile.R*<br>
+*g_to_c_data_compile.R*
 
 **Figures and stats**<br>
-Fig_2_map_final.R<br>
-Fig_3_G_A_continuous_3_depths_final.R<br>
-Fig_4_G_A_bootstrap_regression_final.R<br>
-Fig_5_A_G_continuous_3_depths_final.R<br>
-Fig_6_A_G_bootstrap_regression_final.R<br>
-Fig_7_SOC_map_final.R
+*fig_2_lu_maps.R*<br>
+*fig_3_g_to_c_3_depths.R*<br>
+*fig_4_g_to_c_regression.R*<br>
+*fig_5_c_to_g_3_depths.R*<br>
+*fig_6_c_to_g_regression.R*<br>
+*fig_7_soc_maps.R*
