@@ -8,9 +8,6 @@ Here you will find the scripts used to generate the figures and analysis for the
 
 **Site and laboratory data**: Available on Open Agrar (https://doi.org/10.3220/DATA20200203151139).
 
-**Site histories**: Currently under embargo. This space will be updated when appropriate.
-<br>
-
 The Profile Viewer accessed via the Bodenzustandserhebung Landwirtschaft (BZE-LW) website provides a graphical overview of much of this dataset (https://www.thuenen.de/en/institutes/climate-smart-agriculture/projects/agricultural-soil-inventory-bze-lw).
 <br>
 ## Contents
