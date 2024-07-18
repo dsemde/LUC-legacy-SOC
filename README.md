@@ -18,7 +18,8 @@ File names refer to the figures in the manuscript. Code for the associated stati
 
 **Dataset compilation**<br>
 *c_to_g_data_compile.R*<br>
-*g_to_c_data_compile.R*
+*g_to_c_data_compile.R*<br>
+*site_locations.R*
 
 **Figures and stats**<br>
 *fig_2_lu_maps.R*<br>
