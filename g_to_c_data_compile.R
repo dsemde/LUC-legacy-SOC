@@ -106,18 +106,32 @@ lab_aggregated <- lab |>
       cn_ratio = weighted.mean((TOC/TN),
                           w = FSS,
                           na.rm = TRUE)) |>
-  # Calculate organic carbon stock and stock per cm of soil depth
-  mutate(TOC_stock =
-      (TOC * BD * case_when(depth_increment == "0-10cm" ~ 10,
-                          depth_increment == "10-30cm" ~ 20,
-                          depth_increment == "30-100cm" ~ 70) * 0.1)) |>
-  mutate(TOC_stock_cm =
-      (TOC * BD * case_when(depth_increment == "0-10cm" ~ 10,
-                          depth_increment == "10-30cm" ~ 20,
-                          depth_increment == "30-100cm" ~ 70)) /
-                          case_when(depth_increment == "0-10cm" ~ 10,
-                              depth_increment == "10-30cm" ~ 20,
-                              depth_increment == "30-100cm" ~ 70) * 0.1) |>
+
+    # SOC stock calculation - two methods
+    # Method 1: TOC * BD * thickness
+    # Method 2: TOC * fine soil stock (FBV) - accounts for rock content
+
+    # Method 1:
+    # mutate(TOC_stock =
+    #     ((TOC * 100) * BD * case_when(depth_increment == "0-10cm" ~ 10,
+    #                         depth_increment == "10-30cm" ~ 20,
+    #                         depth_increment == "30-100cm" ~ 70))) %>%
+    # Total organic carbon stock and stock per cm of soil depth
+    # mutate(TOC_stock_cm =
+    #     ((TOC * 100) * BD * case_when(depth_increment == "0-10cm" ~ 10,
+    #                         depth_increment == "10-30cm" ~ 20,
+    #                         depth_increment == "30-100cm" ~ 70)) /
+    #                         case_when(depth_increment == "0-10cm" ~ 10,
+    #                             depth_increment == "10-30cm" ~ 20,
+    #                             depth_increment == "30-100cm" ~ 70)) %>%
+
+    # Method 2:
+    mutate(TOC_stock = (TOC * FBV)) |>
+    # Total organic carbon stock and stock per cm of soil depth
+    mutate(TOC_stock_cm =
+        ((TOC * FBV) / case_when(depth_increment == "0-10cm" ~ 10,
+                               depth_increment == "10-30cm" ~ 20,
+                               depth_increment == "30-100cm" ~ 70))) |>
   ungroup()
 
 
