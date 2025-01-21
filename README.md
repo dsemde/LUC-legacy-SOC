@@ -25,3 +25,6 @@ File names refer to the figures in the manuscript. Code for the associated stati
 *fig_5_c_to_g_3_depths.R*<br>
 *fig_6_c_to_g_regression.R*<br>
 *fig_7_soc_maps.R*
+
+**Version notes**<br>
+21.01.2025 update re-adds the SOC stock calculation adjusted for rock content as noted in the manuscript.
